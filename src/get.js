@@ -16,7 +16,7 @@ fetch('/api/tables', {
 function createCards(data) {
     let cardbox = document.getElementById('box');
     data.forEach((reserve, index) => {
-        const cardHtml = `<div class="card" style="width: 18rem;">
+        let cardHtml = `<div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Table #${(index+1)}</h5>
                 <p class="card-text">${reserve.name}</h6>
