@@ -6,7 +6,20 @@ fetch('/api/tables', {
 })
     .then((response) => response.json())
     .then((data) => {
-        console.log('view.html', data);
+        createCards(data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+fetch('/api/waitlist', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+})
+    .then((response) => response.json())
+    .then((data) => {
         createCards(data);
     })
     .catch((error) => {
