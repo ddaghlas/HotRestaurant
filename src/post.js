@@ -3,10 +3,10 @@ const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click', (e) => {
     e.preventDefault();
     
-    let name = document.getElementById('name').value.trim();
-    let phone = document.getElementById('phone').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let id = document.getElementById('id').value.trim();
+    let name = document.getElementById('inputName').value.trim();
+    let phone = document.getElementById('inputPhone').value.trim();
+    let email = document.getElementById('inputEmail').value.trim();
+    let id = document.getElementById('inputId').value.trim();
     
     let newReservation = {
       name: name,
